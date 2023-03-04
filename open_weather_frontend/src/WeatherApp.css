@@ -1,0 +1,81 @@
+body {
+    background-image: url("https://media.istockphoto.com/id/1327185011/photo/blue-sky-background-with-white-clouds.jpg?b=1&s=170667a&w=0&k=20&c=tawdHRIjdlVs8D8s9o-Lrd0qEv7nCKU8jczRSwaTc-I=");
+    background-size: cover;
+    font-family: 'Apple Chancery', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #359ce5;
+}
+
+.error {
+    color: #f44336;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.weather {
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.weather-description {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
