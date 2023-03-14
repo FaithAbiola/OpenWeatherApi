@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
     private final WeatherService weatherService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping(value = "/api/v1/weather/city/{city}", produces = MediaType.APPLICATION_XML_VALUE)
+    @CrossOrigin(origins = "http://localhost:3001")
+    @GetMapping(value = "/city/{city}", produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<WeatherResponse> getWeather(@PathVariable String city) {
         return ResponseEntity.ok(weatherService.getWeather(city));
     }

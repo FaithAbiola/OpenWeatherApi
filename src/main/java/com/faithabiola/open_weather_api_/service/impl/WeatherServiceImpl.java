@@ -20,24 +20,21 @@ public class WeatherServiceImpl implements WeatherService {
     public WeatherResponse getWeather(String city) {
         String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" +
                 OPEN_WEATHER_API_KEY;
-
+// Create the header
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         HttpEntity entity = new HttpEntity<>(httpHeaders);
 
-        WeatherResponse exchange;
-
-        try {
-            exchange = restTemplate.exchange(
+        WeatherResponse response;
+        //pass the parameters
+            response = restTemplate.exchange(
                     url,
                     HttpMethod.GET,
                     entity,
                     WeatherResponse.class
             ).getBody();
-        } catch (Exception e) {
-            throw new CityNotFoundException("City not found");
-        }
-
-        return exchange;
+        if(response.getCod().equals(404))
+            throw new CityNotFoundException("City not found", 404);
+        return response;
     }
 }

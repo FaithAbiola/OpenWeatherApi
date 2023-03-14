@@ -13,7 +13,7 @@ function WeatherApp() {
         event.preventDefault();
         try {
             const response = await axios.get(
-                `http://localhost:8080/api/v1/weather/city/${city}`
+                `http://localhost:8080/city/${city}`
             );
             const xmlDoc = parser.parseFromString(response.data, "text/xml");
             const weatherElement = xmlDoc.getElementsByTagName("weather")[0];
@@ -28,7 +28,7 @@ function WeatherApp() {
         }
     };
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event) => { // what will make the endpoint run when clicked
         setCity(event.target.value);
         setWeather("");
     };
